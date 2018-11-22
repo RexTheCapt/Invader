@@ -1,32 +1,39 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿#region Usings
+
+using Assets.Scripts.Components;
+using JetBrains.Annotations;
 using UnityEngine;
 
-public class SpawnEnemy : MonoBehaviour
+#endregion
+
+namespace Assets.Scripts
 {
-    public GameObject EnemyGameObject;
-    public DataHolder DataHolder;
-    public bool autoSpawn = false;
-    public int quantity = 1;
-
-    private RandomCircle rc;
-
-    void Start()
+    public class SpawnEnemy : MonoBehaviour
     {
-        rc = gameObject.GetComponent<RandomCircle>();
-    }
+        public bool AutoSpawn = false;
+        public DataHolder DataHolder;
+        public GameObject EnemyGameObject;
+        public int Quantity = 1;
 
-    void Update()
-    {
-        if (Input.GetKey(KeyCode.Space) || autoSpawn)
+        private RandomCircle _rc;
+
+        [UsedImplicitly]
+        private void Start()
         {
-            for (int i = 0; i < quantity; i++)
-            {
-                GameObject enemyInstantiate = Instantiate(EnemyGameObject);
-                enemyInstantiate.gameObject.GetComponent<Enemy>().PlayerGameObject = gameObject;
-                enemyInstantiate.transform.position = rc.GetVector3(gameObject.transform.position, 50f);
-                enemyInstantiate.GetComponent<Enemy>().DataHolder = DataHolder;
-            }
+            _rc = gameObject.GetComponent<RandomCircle>();
+        }
+
+        [UsedImplicitly]
+        private void Update()
+        {
+            if (Input.GetKey(KeyCode.Space) || AutoSpawn)
+                for (int i = 0; i < Quantity; i++)
+                {
+                    GameObject enemyInstantiate = Instantiate(EnemyGameObject);
+                    enemyInstantiate.gameObject.GetComponent<Enemy>().PlayerGameObject = gameObject;
+                    enemyInstantiate.transform.position = _rc.GetVector3(gameObject.transform.position, 50f);
+                    enemyInstantiate.GetComponent<Enemy>().DataHolder = DataHolder;
+                }
         }
     }
 }

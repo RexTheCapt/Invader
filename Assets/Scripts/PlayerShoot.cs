@@ -1,33 +1,33 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using System.Threading;
+﻿#region Usings
+
+using JetBrains.Annotations;
 using UnityEngine;
 
-public class PlayerShoot : MonoBehaviour
+#endregion
+
+namespace Assets.Scripts
 {
-    public DataHolder DataHolder;
-    public GameObject BulletGameObject;
-    public GameObject SpinBulletGameObject;
-    public bool autoFire = false;
-
-    void Update()
+    public class PlayerShoot : MonoBehaviour
     {
-        if (Input.GetButtonDown("Fire1") || autoFire)
+        public bool AutoFire = false;
+        public GameObject BulletGameObject;
+        public DataHolder DataHolder;
+        public GameObject SpinBulletGameObject;
+
+        [UsedImplicitly]
+        private void Update()
         {
-            Fire(BulletGameObject);
+            if (Input.GetButtonDown("Fire1") || AutoFire) Fire(BulletGameObject);
+
+            if (Input.GetKeyDown(KeyCode.X)) Fire(SpinBulletGameObject, false);
         }
 
-        if (Input.GetKeyDown(KeyCode.X))
+        public void Fire(GameObject bullet, bool destroyOnContact = true)
         {
-            Fire(SpinBulletGameObject, false);
+            GameObject bulletInstantiate = Instantiate(bullet);
+            bulletInstantiate.transform.position = gameObject.transform.position;
+            bulletInstantiate.transform.rotation = gameObject.transform.rotation;
+            bulletInstantiate.GetComponent<Bullet>().DestroyOnContact = destroyOnContact;
         }
-    }
-
-    public void Fire(GameObject bullet, bool destroyOnContact = true)
-    {
-        GameObject bulletInstantiate = Instantiate(bullet);
-        bulletInstantiate.transform.position = gameObject.transform.position;
-        bulletInstantiate.transform.rotation = gameObject.transform.rotation;
-        bulletInstantiate.GetComponent<Bullet>().destroyOnContact = destroyOnContact;
     }
 }

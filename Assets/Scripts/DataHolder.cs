@@ -1,19 +1,25 @@
-﻿using System.Collections;
+﻿#region Usings
+
 using System.Collections.Generic;
+using JetBrains.Annotations;
 using UnityEngine;
 
-public class DataHolder : MonoBehaviour
+#endregion
+
+namespace Assets.Scripts
 {
-    public List<GameObject> EnemyGameObjects;
-
-    private float cleanTimer;
-
-    void Update()
+    public class DataHolder : MonoBehaviour
     {
-        foreach (GameObject o in EnemyGameObjects)
+        private float _cleanTimer;
+        public List<GameObject> EnemyGameObjects;
+
+        [UsedImplicitly]
+        private void Update()
         {
-            if (o == null)
-                EnemyGameObjects.Remove(o);
+            foreach (GameObject o in EnemyGameObjects)
+                if (o == null)
+                    // ReSharper disable once ExpressionIsAlwaysNull
+                    EnemyGameObjects.Remove(o);
         }
     }
 }

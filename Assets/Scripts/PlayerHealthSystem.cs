@@ -1,17 +1,24 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿#region Usings
+
+using JetBrains.Annotations;
 using UnityEngine;
 
-public class PlayerHealthSystem : MonoBehaviour
-{
-    public int health = 10;
+#endregion
 
-    void OnTriggerEnter(Collider collision)
+namespace Assets.Scripts
+{
+    public class PlayerHealthSystem : MonoBehaviour
     {
-        if (collision.gameObject.tag == "Enemy")
+        public int Health = 10;
+
+        [UsedImplicitly]
+        private void OnTriggerEnter(Collider collision)
         {
-            health--;
-            Destroy(collision.gameObject);
+            if (collision.gameObject.tag == "Enemy")
+            {
+                Health--;
+                Destroy(collision.gameObject);
+            }
         }
     }
 }

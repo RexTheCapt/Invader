@@ -1,17 +1,25 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿#region Usings
+
+using JetBrains.Annotations;
 using UnityEngine;
 
-public class BulletHit : MonoBehaviour
-{
-    public GameObject ParentGameObject;
+#endregion
 
-    void OnTriggerEnter(Collider collider)
+namespace Assets.Scripts
+{
+    public class BulletHit : MonoBehaviour
     {
-        if(collider.tag == "Enemy")
+        public GameObject ParentGameObject;
+
+        [UsedImplicitly]
+        // ReSharper disable once ParameterHidesMember
+        private void OnTriggerEnter(Collider collider)
         {
-            Destroy(collider.gameObject);
-            ParentGameObject.GetComponent<Bullet>().Destroy();
+            if (collider.tag == "Enemy")
+            {
+                Destroy(collider.gameObject);
+                ParentGameObject.GetComponent<Bullet>().Destroy();
+            }
         }
     }
 }

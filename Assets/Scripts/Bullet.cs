@@ -1,37 +1,43 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿#region Usings
+
+using JetBrains.Annotations;
 using UnityEngine;
 
-public class Bullet : MonoBehaviour
+#endregion
+
+namespace Assets.Scripts
 {
-    public Vector3 startPosition;
-    public float speed = 2f;
-    public GameObject SpecialBulletControllerGameObject;
-    public bool destroyOnContact = true;
-
-    void Start()
+    public class Bullet : MonoBehaviour
     {
-        startPosition = gameObject.transform.position;
-    }
+        public bool DestroyOnContact = true;
+        public GameObject SpecialBulletControllerGameObject;
+        public float Speed = 2f;
+        public Vector3 StartPosition;
 
-    // Update is called once per frame
-    void Update()
-    {
-        if(Vector3.Distance(gameObject.transform.position, startPosition) > 55f)
-            Destroy(gameObject);
-
-        gameObject.transform.position += transform.forward * Time.deltaTime * speed;
-    }
-
-    public void Destroy()
-    {
-        if (destroyOnContact)
+        [UsedImplicitly]
+        private void Start()
         {
-            if (SpecialBulletControllerGameObject != null)
-                Destroy(SpecialBulletControllerGameObject);
-            else
-            {
+            StartPosition = gameObject.transform.position;
+        }
+
+        // Update is called once per frame
+        [UsedImplicitly]
+        private void Update()
+        {
+            if (Vector3.Distance(gameObject.transform.position, StartPosition) > 55f)
                 Destroy(gameObject);
+
+            gameObject.transform.position += transform.forward * Time.deltaTime * Speed;
+        }
+
+        public void Destroy()
+        {
+            if (DestroyOnContact)
+            {
+                if (SpecialBulletControllerGameObject != null)
+                    Destroy(SpecialBulletControllerGameObject);
+                else
+                    Destroy(gameObject);
             }
         }
     }

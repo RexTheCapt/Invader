@@ -1,15 +1,22 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿#region Usings
+
+using JetBrains.Annotations;
 using UnityEngine;
 
-public class BulletSpin : MonoBehaviour
+#endregion
+
+namespace Assets.Scripts
 {
-    public float spinSpeed = 1f;
-
-    void Update()
+    public class BulletSpin : MonoBehaviour
     {
-        Vector3 rotationVector3 = new Vector3(0, spinSpeed, 0) + gameObject.transform.rotation.eulerAngles;
+        public float SpinSpeed = 1f;
 
-        gameObject.transform.rotation = Quaternion.Euler(rotationVector3);
+        [UsedImplicitly]
+        private void Update()
+        {
+            Vector3 rotationVector3 = new Vector3(0, SpinSpeed, 0) + gameObject.transform.rotation.eulerAngles;
+
+            gameObject.transform.rotation = Quaternion.Euler(rotationVector3);
+        }
     }
 }

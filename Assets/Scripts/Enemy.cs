@@ -1,22 +1,30 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿#region Usings
+
+using JetBrains.Annotations;
 using UnityEngine;
 
-public class Enemy : MonoBehaviour
+#endregion
+
+namespace Assets.Scripts
 {
-    public GameObject PlayerGameObject;
-    public DataHolder DataHolder;
-
-    // Use this for initialization
-    void Start()
+    public class Enemy : MonoBehaviour
     {
-        gameObject.transform.LookAt(PlayerGameObject.transform.position);
-        DataHolder.EnemyGameObjects.Add(gameObject);
-    }
+        public DataHolder DataHolder;
+        public GameObject PlayerGameObject;
 
-    // Update is called once per frame
-    void Update()
-    {
-        transform.position += transform.forward * Time.deltaTime * 5;
+        // Use this for initialization
+        [UsedImplicitly]
+        private void Start()
+        {
+            gameObject.transform.LookAt(PlayerGameObject.transform.position);
+            DataHolder.EnemyGameObjects.Add(gameObject);
+        }
+
+        // Update is called once per frame
+        [UsedImplicitly]
+        private void Update()
+        {
+            transform.position += transform.forward * Time.deltaTime * 5;
+        }
     }
 }
