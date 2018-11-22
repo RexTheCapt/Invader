@@ -1771,6 +1771,7 @@ MonoBehaviour:
   BulletSpecial: {fileID: 114742362237913958}
   Speed: 5
   StartPosition: {x: 0, y: 0, z: 0}
+  DistanceTraveled: 0
 --- !u!114 &114067484252261494
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1786,6 +1787,7 @@ MonoBehaviour:
   BulletSpecial: {fileID: 114742362237913958}
   Speed: 5
   StartPosition: {x: 0, y: 0, z: 0}
+  DistanceTraveled: 0
 --- !u!114 &114077373951712968
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1801,6 +1803,7 @@ MonoBehaviour:
   BulletSpecial: {fileID: 114742362237913958}
   Speed: 5
   StartPosition: {x: 0, y: 0, z: 0}
+  DistanceTraveled: 0
 --- !u!114 &114175532674604156
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1828,6 +1831,7 @@ MonoBehaviour:
   BulletSpecial: {fileID: 114742362237913958}
   Speed: 5
   StartPosition: {x: 0, y: 0, z: 0}
+  DistanceTraveled: 0
 --- !u!114 &114197027757886860
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1843,6 +1847,7 @@ MonoBehaviour:
   BulletSpecial: {fileID: 114742362237913958}
   Speed: 5
   StartPosition: {x: 0, y: 0, z: 0}
+  DistanceTraveled: 0
 --- !u!114 &114214852943572150
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1882,6 +1887,7 @@ MonoBehaviour:
   BulletSpecial: {fileID: 114742362237913958}
   Speed: 5
   StartPosition: {x: 0, y: 0, z: 0}
+  DistanceTraveled: 0
 --- !u!114 &114421100740677580
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1897,6 +1903,7 @@ MonoBehaviour:
   BulletSpecial: {fileID: 114742362237913958}
   Speed: 5
   StartPosition: {x: 0, y: 0, z: 0}
+  DistanceTraveled: 0
 --- !u!114 &114438745306494956
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -1960,6 +1967,7 @@ MonoBehaviour:
   BulletSpecial: {fileID: 114742362237913958}
   Speed: 5
   StartPosition: {x: 0, y: 0, z: 0}
+  DistanceTraveled: 0
 --- !u!114 &114610030578005988
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2011,6 +2019,7 @@ MonoBehaviour:
   BulletSpecial: {fileID: 114742362237913958}
   Speed: 5
   StartPosition: {x: 0, y: 0, z: 0}
+  DistanceTraveled: 0
 --- !u!114 &114669591882072274
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2038,6 +2047,7 @@ MonoBehaviour:
   BulletSpecial: {fileID: 114742362237913958}
   Speed: 5
   StartPosition: {x: 0, y: 0, z: 0}
+  DistanceTraveled: 0
 --- !u!114 &114715415042183406
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2053,6 +2063,7 @@ MonoBehaviour:
   BulletSpecial: {fileID: 114742362237913958}
   Speed: 5
   StartPosition: {x: 0, y: 0, z: 0}
+  DistanceTraveled: 0
 --- !u!114 &114742362237913958
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2064,10 +2075,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d53f9b2060046214197747398ee5c3bd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Speed: 1
   BulletList: []
-  SpinSpeed: 80
+  Speed: 0
+  SpinSpeed: 5
   DestructOnContact: 1
+  PreventControllerFromDestruction: 1
 --- !u!114 &114759568452731164
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2095,6 +2107,7 @@ MonoBehaviour:
   BulletSpecial: {fileID: 114742362237913958}
   Speed: 5
   StartPosition: {x: 0, y: 0, z: 0}
+  DistanceTraveled: 0
 --- !u!114 &114795662276783650
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2110,6 +2123,7 @@ MonoBehaviour:
   BulletSpecial: {fileID: 114742362237913958}
   Speed: 5
   StartPosition: {x: 0, y: 0, z: 0}
+  DistanceTraveled: 0
 --- !u!114 &114877728745340320
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2125,6 +2139,7 @@ MonoBehaviour:
   BulletSpecial: {fileID: 114742362237913958}
   Speed: 5
   StartPosition: {x: 0, y: 0, z: 0}
+  DistanceTraveled: 0
 --- !u!114 &114903015886955892
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2152,6 +2167,7 @@ MonoBehaviour:
   BulletSpecial: {fileID: 114742362237913958}
   Speed: 5
   StartPosition: {x: 0, y: 0, z: 0}
+  DistanceTraveled: 0
 --- !u!114 &114957146922190560
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -2167,6 +2183,7 @@ MonoBehaviour:
   BulletSpecial: {fileID: 114742362237913958}
   Speed: 5
   StartPosition: {x: 0, y: 0, z: 0}
+  DistanceTraveled: 0
 --- !u!136 &136000369261128184
 CapsuleCollider:
   m_ObjectHideFlags: 1
