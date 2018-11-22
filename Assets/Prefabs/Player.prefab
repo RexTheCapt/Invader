@@ -335,5 +335,7 @@ MonoBehaviour:
   BulletGameObject: {fileID: 1922054240396834, guid: 55876ab9ee4629647b56d2cb2fac4497,
     type: 2}
   DataHolder: {fileID: 0}
-  SpinBulletGameObject: {fileID: 1008575513548690, guid: 6245451f027146b4bb575a1bead84d24,
+  NukeBulletGameObject: {fileID: 1008575513548690, guid: 6245451f027146b4bb575a1bead84d24,
+    type: 2}
+  BulletShieldGameObject: {fileID: 1345924895182174, guid: c6f8c726c3b79d54fbc5910796e46116,
     type: 2}

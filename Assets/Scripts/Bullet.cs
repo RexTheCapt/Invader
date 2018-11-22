@@ -39,7 +39,7 @@ namespace Assets.Scripts
         private void Destruct()
         {
             if (BulletSpecial != null)
-                BulletSpecial.Destruct();
+                BulletSpecial.Destruct(gameObject);
             Destroy(gameObject);
         }
 

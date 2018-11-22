@@ -1,6 +1,5 @@
 ﻿#region Usings
 
-using System;
 using System.Collections.Generic;
 using JetBrains.Annotations;
 using UnityEngine;
@@ -11,24 +10,11 @@ namespace Assets.Scripts
 {
     public class BulletSpecial : MonoBehaviour
     {
-        #region Type class
-
-        [Serializable]
-        private class Type
-        {
-            public bool Nuke = false;
-        }
-
-        [SerializeField]
-        Type type = new Type();
-
-        #endregion
-
         public float Speed = 1;
         public List<GameObject> BulletList = new List<GameObject>();
-
-        [Header("Nuke setting")]
         public float SpinSpeed = 2f;
+        public bool DestructOnContact = false;
+        public bool PreventControllerFromDestruction = false;
 
         [UsedImplicitly]
         void Update()
@@ -40,18 +26,20 @@ namespace Assets.Scripts
                     Bullet b = o.GetComponent<Bullet>();
 
                     b.Speed = Speed;
+
+                    b.DestroyOnContact = DestructOnContact;
                 }
             }
 
-            if (type.Nuke)
-            {
-                transform.rotation = Quaternion.Euler(new Vector3(0, SpinSpeed, 0) + transform.eulerAngles);
-            }
+            transform.rotation = Quaternion.Euler(new Vector3(0, SpinSpeed, 0) + transform.eulerAngles);
         }
 
-        internal void Destruct()
+        internal void Destruct(GameObject g)
         {
-            Destroy(gameObject);
+            if (PreventControllerFromDestruction)
+                Destroy(g);
+            else
+                Destroy(g);
         }
     }
 }
