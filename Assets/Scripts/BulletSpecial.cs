@@ -3,6 +3,7 @@
 using System.Collections.Generic;
 using JetBrains.Annotations;
 using UnityEngine;
+// ReSharper disable MemberCanBePrivate.Global
 
 #endregion
 
@@ -33,6 +34,7 @@ namespace Assets.Scripts
                 }
                 else
                 {
+                    // ReSharper disable once ExpressionIsAlwaysNull
                     BulletList.Remove(o);
                 }
             }
