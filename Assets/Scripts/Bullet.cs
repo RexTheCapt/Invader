@@ -13,6 +13,7 @@ namespace Assets.Scripts
         public BulletSpecial BulletSpecial;
         public float Speed = 5f;
         public Vector3 StartPosition;
+        public float DistanceTraveled;
 
         [UsedImplicitly]
         private void Start()
@@ -30,7 +31,9 @@ namespace Assets.Scripts
         [UsedImplicitly]
         private void Update()
         {
-            if (Vector3.Distance(gameObject.transform.position, StartPosition) > 55f)
+            DistanceTraveled = Vector3.Distance(gameObject.transform.position, StartPosition);
+
+            if (Vector3.Distance(gameObject.transform.position, StartPosition) > 50f)
                 Destruct();
 
             gameObject.transform.position += transform.forward * Time.deltaTime * Speed;
