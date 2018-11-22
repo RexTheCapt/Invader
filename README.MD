@@ -5,5 +5,5 @@ Yet another school project. <br>
 
 ### Todo
 
-- [ ] Add automatic enemy spawning
+- [X] Add automatic enemy spawning
 - [ ] Fix an NullReferenceException error on special bullet spawns
