@@ -11,6 +11,8 @@ namespace Assets.Scripts
     public class SpawnEnemy : MonoBehaviour
     {
         public bool AutoSpawn = false;
+        public bool SpawnWithKey = false;
+        public KeyCode SpawnEnemyKeyCode = KeyCode.Space;
         public DataHolder DataHolder;
         public GameObject EnemyGameObject;
         public int Quantity = 1;
@@ -26,14 +28,22 @@ namespace Assets.Scripts
         [UsedImplicitly]
         private void Update()
         {
-            if (Input.GetKey(KeyCode.Space) || AutoSpawn)
+            if (Input.GetKey(SpawnEnemyKeyCode) && SpawnWithKey)
                 for (int i = 0; i < Quantity; i++)
                 {
-                    GameObject enemyInstantiate = Instantiate(EnemyGameObject);
-                    enemyInstantiate.gameObject.GetComponent<Enemy>().PlayerGameObject = gameObject;
-                    enemyInstantiate.transform.position = _rc.GetVector3(gameObject.transform.position, 50f);
-                    enemyInstantiate.GetComponent<Enemy>().DataHolder = DataHolder;
+                    Spawn();
                 }
+
+            if(DataHolder.EnemyGameObjects.Count < 10 && (!SpawnWithKey || AutoSpawn))
+                Spawn();
+        }
+
+        private void Spawn()
+        {
+            GameObject enemyInstantiate = Instantiate(EnemyGameObject);
+            enemyInstantiate.gameObject.GetComponent<Enemy>().PlayerGameObject = gameObject;
+            enemyInstantiate.transform.position = _rc.GetVector3(gameObject.transform.position, 50f);
+            enemyInstantiate.GetComponent<Enemy>().DataHolder = DataHolder;
         }
     }
 }

@@ -10,8 +10,8 @@ namespace Assets.Scripts
 {
     public class BulletSpecial : MonoBehaviour
     {
-        public float Speed = 1;
         public List<GameObject> BulletList = new List<GameObject>();
+        public float Speed = 1;
         public float SpinSpeed = 2f;
         public bool DestructOnContact = false;
         public bool PreventControllerFromDestruction = false;
@@ -19,8 +19,10 @@ namespace Assets.Scripts
         [UsedImplicitly]
         void Update()
         {
-            foreach (GameObject o in BulletList)
+            for (int i = BulletList.Count - 1; i >= 0; i--)
             {
+                GameObject o = BulletList[i];
+
                 if (o != null)
                 {
                     Bullet b = o.GetComponent<Bullet>();
@@ -29,7 +31,14 @@ namespace Assets.Scripts
 
                     b.DestroyOnContact = DestructOnContact;
                 }
+                else
+                {
+                    BulletList.Remove(o);
+                }
             }
+
+            if(BulletList.Count == 0)
+                Destroy(gameObject);
 
             transform.rotation = Quaternion.Euler(new Vector3(0, SpinSpeed, 0) + transform.eulerAngles);
         }
@@ -39,7 +48,7 @@ namespace Assets.Scripts
             if (PreventControllerFromDestruction)
                 Destroy(g);
             else
-                Destroy(g);
+                Destroy(gameObject);
         }
     }
 }
