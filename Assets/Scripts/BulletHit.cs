@@ -18,7 +18,7 @@ namespace Assets.Scripts
             if (collider.tag == "Enemy")
             {
                 Destroy(collider.gameObject);
-                ParentGameObject.GetComponent<Bullet>().Destroy();
+                ParentGameObject.GetComponent<Bullet>().DestructOnContact();
             }
         }
     }

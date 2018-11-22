@@ -280,7 +280,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Senstivity: 2
-  spinSpeed: 0
+  SpinSpeed: 0
 --- !u!114 &114425917687161394
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -303,11 +303,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fc9ce512cda31dc46b1a9c97a5c42da7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  AutoSpawn: 0
+  DataHolder: {fileID: 0}
   EnemyGameObject: {fileID: 1824323129479838, guid: 6e303d142dcd60c4ebbb7c236a12fce5,
     type: 2}
-  DataHolder: {fileID: 0}
-  autoSpawn: 0
-  quantity: 1
+  Quantity: 1
 --- !u!114 &114757296001045356
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -319,7 +319,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8788f017ef8f3de498a78b7029a014f5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 10
+  Health: 10
 --- !u!114 &114810077752358680
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -331,9 +331,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cc6382428ba332440a2fe224af8b7d2e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  DataHolder: {fileID: 0}
+  AutoFire: 0
   BulletGameObject: {fileID: 1922054240396834, guid: 55876ab9ee4629647b56d2cb2fac4497,
     type: 2}
-  SpinBulletGameObject: {fileID: 1875665944255334, guid: 807ba3416155cc1469ef3a5e9d0ff98a,
+  DataHolder: {fileID: 0}
+  SpinBulletGameObject: {fileID: 1008575513548690, guid: 6245451f027146b4bb575a1bead84d24,
     type: 2}
-  autoFire: 0

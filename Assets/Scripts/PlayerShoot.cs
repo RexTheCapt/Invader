@@ -19,7 +19,7 @@ namespace Assets.Scripts
         {
             if (Input.GetButtonDown("Fire1") || AutoFire) Fire(BulletGameObject);
 
-            if (Input.GetKeyDown(KeyCode.X)) Fire(SpinBulletGameObject, false);
+            if(Input.GetKeyDown(KeyCode.X)) Fire(SpinBulletGameObject);
         }
 
         public void Fire(GameObject bullet, bool destroyOnContact = true)

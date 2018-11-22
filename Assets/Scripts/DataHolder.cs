@@ -16,10 +16,13 @@ namespace Assets.Scripts
         [UsedImplicitly]
         private void Update()
         {
-            foreach (GameObject o in EnemyGameObjects)
+            for (int i = EnemyGameObjects.Count - 1; i >= 0; i--)
+            {
+                GameObject o = EnemyGameObjects[i];
                 if (o == null)
                     // ReSharper disable once ExpressionIsAlwaysNull
                     EnemyGameObjects.Remove(o);
+            }
         }
     }
 }
