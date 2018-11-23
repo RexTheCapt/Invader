@@ -13,6 +13,8 @@
 - Moved every scripts starting on *Player* into *PlayerScripts*.
 - Changed script name *Nuke* to *NukeScript*.
 - Added some text formats to the changelog.
+- Created an nuke prefab.
+- Renamed scene *SampleScene* to *Game*.
 
 ## 22/11/18
 
