@@ -66,6 +66,7 @@
     <Compile Include="Assets\Scripts\BulletScripts\BulletSpecial.cs" />
     <Compile Include="Assets\Scripts\Components\RandomCircle.cs" />
     <Compile Include="Assets\Scripts\DataHolder.cs" />
+    <Compile Include="Assets\Scripts\EnableCanvasOnPlay.cs" />
     <Compile Include="Assets\Scripts\Enemy.cs" />
     <Compile Include="Assets\Scripts\GuiController.cs" />
     <Compile Include="Assets\Scripts\NukeScript.cs" />

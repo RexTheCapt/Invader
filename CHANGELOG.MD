@@ -23,6 +23,7 @@
 - Created and added a material to the Nuke.
 - Changed the bullet color because i got tired of people calling them for pickles. ***THEY ARE NOT PICKLES!!!***
 - When an ability is used you have to build it up again.
+- Made a script to make sure the HUD is enabled on start.
 
 ### Note
 - Abilities do not build up other abilities.
