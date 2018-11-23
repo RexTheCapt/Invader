@@ -18,6 +18,7 @@
 - The nuke now expands and destroys every enemies in it's path.
 - When the nuke reaches the size 100 it get's deleted.
 - Can now edit the Nuke's expansion speed.
+- Created and added a material to the Nuke.
 
 ## 22/11/18
 
