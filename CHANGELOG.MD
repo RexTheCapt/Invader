@@ -6,6 +6,8 @@
 
 ### Added features
 - Found an [ReverseNormal](http://wiki.unity3d.com/index.php?title=ReverseNormals) script that let's you see the insides of a object.
+- Created script *UiAutoResize* to keep UI elements the same size on all screens (or at least try to).
+- Created an HUD for the player that shows nuke and shield charge.
 
 ### Changes
 - Moved every scripts starting on *Bullet* into *BulletScripts*.
@@ -20,6 +22,10 @@
 - Can now edit the Nuke's expansion speed.
 - Created and added a material to the Nuke.
 - Changed the bullet color because i got tired of people calling them for pickles. ***THEY ARE NOT PICKLES!!!***
+- When an ability is used you have to build it up again.
+
+### Note
+- Abilities do not build up other abilities.
 
 ## 22/11/18
 

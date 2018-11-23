@@ -7,3 +7,5 @@ Yet another school project. <br>
 
 - [X] Add automatic enemy spawning
 - [ ] Fix an NullReferenceException error on special bullet spawns
+- [ ] Add health
+- [ ] Tweak the nuke and shield charging

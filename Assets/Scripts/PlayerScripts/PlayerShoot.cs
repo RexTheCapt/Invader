@@ -1,5 +1,6 @@
 ﻿#region Usings
 
+using Assets.Scripts.BulletScripts;
 using JetBrains.Annotations;
 using UnityEngine;
 // ReSharper disable MemberCanBePrivate.Global
@@ -11,8 +12,9 @@ namespace Assets.Scripts.PlayerScripts
     public class PlayerShoot : MonoBehaviour
     {
         public bool AutoFire = false;
-        public GameObject BulletGameObject;
         public DataHolder DataHolder;
+        public GuiController GuiController;
+        public GameObject BulletGameObject;
         public GameObject NukeBulletGameObject;
         public GameObject BulletShieldGameObject;
 
@@ -21,9 +23,19 @@ namespace Assets.Scripts.PlayerScripts
         {
             if (Input.GetButtonDown("Fire1") || AutoFire) Fire(BulletGameObject);
 
-            if(Input.GetKeyDown(KeyCode.X)) Fire(NukeBulletGameObject);
+            // ReSharper disable once CompareOfFloatsByEqualityOperator
+            if(Input.GetKeyDown(KeyCode.X) && DataHolder.NukeCharge >= 1f)
+            {
+                DataHolder.NukeCharge = 0f;
+                Fire(NukeBulletGameObject);
+            }
 
-            if(Input.GetKeyDown(KeyCode.Z)) Fire(BulletShieldGameObject);
+            // ReSharper disable once CompareOfFloatsByEqualityOperator
+            if (Input.GetKeyDown(KeyCode.Z) && DataHolder.ShieldCharge >= 1f)
+            {
+                DataHolder.ShieldCharge = 0f;
+                Fire(BulletShieldGameObject);
+            }
         }
 
         public void Fire(GameObject bullet)
@@ -31,6 +43,7 @@ namespace Assets.Scripts.PlayerScripts
             GameObject bulletInstantiate = Instantiate(bullet);
             bulletInstantiate.transform.position = gameObject.transform.position;
             bulletInstantiate.transform.rotation = gameObject.transform.rotation;
+            bulletInstantiate.GetComponent<Bullet>().DataHolder = DataHolder;
         }
     }
 }

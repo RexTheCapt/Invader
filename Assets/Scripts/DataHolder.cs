@@ -13,6 +13,11 @@ namespace Assets.Scripts
         private float _cleanTimer;
         public List<GameObject> EnemyGameObjects;
 
+        public float NukeCharge = 0f;
+        public float ShieldCharge = 0f;
+        public float NukeChargeAdd = 0.01f;
+        public float ShieldChargeAdd = 0.05f;
+
         [UsedImplicitly]
         private void Update()
         {

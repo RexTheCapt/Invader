@@ -247,7 +247,7 @@ Rigidbody:
   m_UseGravity: 1
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 14
+  m_Constraints: 94
   m_CollisionDetection: 0
 --- !u!65 &65475082301325264
 BoxCollider:
@@ -304,6 +304,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AutoSpawn: 0
+  SpawnWithKey: 0
+  SpawnEnemyKeyCode: 32
   DataHolder: {fileID: 0}
   EnemyGameObject: {fileID: 1824323129479838, guid: 6e303d142dcd60c4ebbb7c236a12fce5,
     type: 2}
@@ -332,10 +334,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   AutoFire: 0
+  DataHolder: {fileID: 0}
+  GuiController: {fileID: 0}
   BulletGameObject: {fileID: 1922054240396834, guid: 55876ab9ee4629647b56d2cb2fac4497,
     type: 2}
-  DataHolder: {fileID: 0}
-  NukeBulletGameObject: {fileID: 1008575513548690, guid: 6245451f027146b4bb575a1bead84d24,
+  NukeBulletGameObject: {fileID: 1133914574673796, guid: 0d643bdaea0e19742a64ae1bf3f0d2d3,
     type: 2}
   BulletShieldGameObject: {fileID: 1345924895182174, guid: c6f8c726c3b79d54fbc5910796e46116,
     type: 2}

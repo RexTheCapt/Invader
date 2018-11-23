@@ -15,6 +15,7 @@ namespace Assets.Scripts.BulletScripts
         public float Speed = 5f;
         public Vector3 StartPosition;
         public float DistanceTraveled;
+        public DataHolder DataHolder;
 
         [UsedImplicitly]
         private void Start()
@@ -51,6 +52,18 @@ namespace Assets.Scripts.BulletScripts
         {
             if (DestroyOnContact)
             {
+                if (BulletSpecial == null)
+                {
+                    DataHolder.NukeCharge += DataHolder.NukeChargeAdd;
+                    DataHolder.ShieldCharge += DataHolder.ShieldChargeAdd;
+
+                    if (DataHolder.NukeCharge > 1f)
+                        DataHolder.NukeCharge = 1f;
+
+                    if (DataHolder.ShieldCharge > 1f)
+                        DataHolder.ShieldCharge = 1f;
+                }
+
                 Destruct();
             }
         }
