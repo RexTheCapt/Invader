@@ -3,6 +3,7 @@
 using Assets.Scripts.Components;
 using JetBrains.Annotations;
 using UnityEngine;
+// ReSharper disable MemberCanBePrivate.Global
 
 #endregion
 

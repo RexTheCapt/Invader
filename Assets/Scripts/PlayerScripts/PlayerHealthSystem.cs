@@ -2,10 +2,11 @@
 
 using JetBrains.Annotations;
 using UnityEngine;
+// ReSharper disable MemberCanBePrivate.Global
 
 #endregion
 
-namespace Assets.Scripts
+namespace Assets.Scripts.PlayerScripts
 {
     public class PlayerHealthSystem : MonoBehaviour
     {

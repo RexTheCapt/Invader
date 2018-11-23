@@ -3,11 +3,12 @@
 using System.Collections.Generic;
 using JetBrains.Annotations;
 using UnityEngine;
+
 // ReSharper disable MemberCanBePrivate.Global
 
 #endregion
 
-namespace Assets.Scripts
+namespace Assets.Scripts.BulletScripts
 {
     public class BulletSpecial : MonoBehaviour
     {

@@ -1,10 +1,11 @@
 ﻿#region Usings
 
 using UnityEngine;
+// ReSharper disable MemberCanBePrivate.Global
 
 #endregion
 
-namespace Assets.Scripts
+namespace Assets.Scripts.PlayerScripts
 {
     public class PlayerRotate : MonoBehaviour
     {
