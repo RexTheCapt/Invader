@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 135771801519334442}
   - component: {fileID: 114604547837615010}
   - component: {fileID: 54048476471760908}
+  - component: {fileID: 114398499132934578}
   m_Layer: 0
   m_Name: Nuke
   m_TagString: Bullet
@@ -101,6 +102,17 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 126
   m_CollisionDetection: 0
+--- !u!114 &114398499132934578
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1133914574673796}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9ff63093199d054ca98d0b67ba96ebc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114604547837615010
 MonoBehaviour:
   m_ObjectHideFlags: 1

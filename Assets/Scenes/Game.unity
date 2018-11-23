@@ -360,6 +360,12 @@ Prefab:
       propertyPath: m_Constraints
       value: 94
       objectReference: {fileID: 0}
+    - target: {fileID: 114810077752358680, guid: a7029b8efcf17414d9e81cd3c1d16c55,
+        type: 2}
+      propertyPath: NukeBulletGameObject
+      value: 
+      objectReference: {fileID: 1133914574673796, guid: 0d643bdaea0e19742a64ae1bf3f0d2d3,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a7029b8efcf17414d9e81cd3c1d16c55, type: 2}
   m_IsPrefabAsset: 0

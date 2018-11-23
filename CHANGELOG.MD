@@ -15,6 +15,9 @@
 - Added some text formats to the changelog.
 - Created an nuke prefab.
 - Renamed scene *SampleScene* to *Game*.
+- The nuke now expands and destroys every enemies in it's path.
+- When the nuke reaches the size 100 it get's deleted.
+- Can now edit the Nuke's expansion speed.
 
 ## 22/11/18
 
