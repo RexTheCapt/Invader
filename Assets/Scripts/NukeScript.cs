@@ -1,5 +1,6 @@
 ﻿#region Usings
 
+using JetBrains.Annotations;
 using UnityEngine;
 
 #endregion
@@ -10,10 +11,11 @@ namespace Assets.Scripts
     {
         public float ExpansionSpeed = 5f;
 
+        [UsedImplicitly]
         void Update()
         {
-            float ExpandBy = Time.deltaTime * ExpansionSpeed;
-            Vector3 expandVector3 = new Vector3(ExpandBy, ExpandBy, ExpandBy);
+            float expandBy = Time.deltaTime * ExpansionSpeed;
+            Vector3 expandVector3 = new Vector3(expandBy, expandBy, expandBy);
 
             transform.localScale += expandVector3;
 
@@ -21,6 +23,8 @@ namespace Assets.Scripts
                 Destroy(gameObject);
         }
 
+        [UsedImplicitly]
+        // ReSharper disable once ParameterHidesMember
         void OnTriggerEnter(Collider collider)
         {
             if (collider.gameObject.tag == "Enemy")
