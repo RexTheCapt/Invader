@@ -6,7 +6,7 @@ using UnityEngine;
 
 namespace Assets.Scripts
 {
-    public class Nuke : MonoBehaviour
+    public class NukeScript : MonoBehaviour
     {
 
     }

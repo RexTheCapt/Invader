@@ -67,7 +67,7 @@
     <Compile Include="Assets\Scripts\Components\RandomCircle.cs" />
     <Compile Include="Assets\Scripts\DataHolder.cs" />
     <Compile Include="Assets\Scripts\Enemy.cs" />
-    <Compile Include="Assets\Scripts\Nuke.cs" />
+    <Compile Include="Assets\Scripts\NukeScript.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\PlayerHealthSystem.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\PlayerRotate.cs" />
     <Compile Include="Assets\Scripts\PlayerScripts\PlayerShoot.cs" />
