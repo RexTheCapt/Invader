@@ -476,8 +476,8 @@ MonoBehaviour:
   EnemyGameObjects: []
   NukeCharge: 0
   ShieldCharge: 0
-  NukeChargeAdd: 0.01
-  ShieldChargeAdd: 0.05
+  NukeChargeAdd: 0.005
+  ShieldChargeAdd: 0.02
 --- !u!1 &1043781211
 GameObject:
   m_ObjectHideFlags: 0
