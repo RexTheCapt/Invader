@@ -478,6 +478,8 @@ MonoBehaviour:
   EnemyGameObjects: []
   NukeChargeAdd: 0.005
   ShieldChargeAdd: 0.02
+  _nukeCharge: 0
+  _shieldCharge: 0
 --- !u!114 &990775919
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -727,11 +729,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114682157736027934, guid: a7029b8efcf17414d9e81cd3c1d16c55,
-        type: 2}
-      propertyPath: DataHolder
-      value: 
-      objectReference: {fileID: 990775918}
     - target: {fileID: 114810077752358680, guid: a7029b8efcf17414d9e81cd3c1d16c55,
         type: 2}
       propertyPath: DataHolder
@@ -742,6 +739,11 @@ Prefab:
       propertyPath: GuiController
       value: 
       objectReference: {fileID: 1271597505}
+    - target: {fileID: 114682157736027934, guid: a7029b8efcf17414d9e81cd3c1d16c55,
+        type: 2}
+      propertyPath: DataHolder
+      value: 
+      objectReference: {fileID: 990775918}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a7029b8efcf17414d9e81cd3c1d16c55, type: 2}
   m_IsPrefabAsset: 0

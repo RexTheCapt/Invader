@@ -130,7 +130,6 @@ MonoBehaviour:
   BulletSpecial: {fileID: 0}
   Speed: 30
   StartPosition: {x: 0, y: 0, z: 0}
-  DistanceTraveled: 0
   DataHolder: {fileID: 0}
 --- !u!114 &114762416792808728
 MonoBehaviour:
@@ -143,7 +142,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8efa6393a06629c4ea6396f9759e10d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  bullet: {fileID: 114600967670089120}
+  Bullet: {fileID: 114600967670089120}
 --- !u!136 &136881107373260130
 CapsuleCollider:
   m_ObjectHideFlags: 1
