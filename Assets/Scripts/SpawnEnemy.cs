@@ -14,7 +14,7 @@ namespace Assets.Scripts
         public bool AutoSpawn = false;
         public bool SpawnWithKey = false;
         public KeyCode SpawnEnemyKeyCode = KeyCode.Space;
-        public DataHolder DataHolder;
+        public ArenaController DataHolder;
         public GameObject EnemyGameObject;
         public int Quantity = 1;
 

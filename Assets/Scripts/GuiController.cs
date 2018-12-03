@@ -9,9 +9,9 @@ namespace Assets.Scripts
 {
     public class GuiController : MonoBehaviour
     {
-        public DataHolder DataHolder;
-        public GameObject NukeChargeGameObject;
-        public GameObject ShieldChargeGameObject;
+        [UsedImplicitly] public ArenaController DataHolder;
+        [UsedImplicitly] public GameObject NukeChargeGameObject;
+        [UsedImplicitly] public GameObject ShieldChargeGameObject;
 
         // Use this for initialization
         [UsedImplicitly]
@@ -23,12 +23,9 @@ namespace Assets.Scripts
         [UsedImplicitly]
         private void Update()
         {
-            RectTransform rectTransform;
-            Vector3 localScale;
-
             // Update the nuke charge
-            rectTransform = NukeChargeGameObject.GetComponent<RectTransform>();
-            localScale = rectTransform.localScale;
+            RectTransform rectTransform = NukeChargeGameObject.GetComponent<RectTransform>();
+            Vector3 localScale = rectTransform.localScale;
             localScale.y = DataHolder.NukeCharge;
 
             rectTransform.localScale = localScale;

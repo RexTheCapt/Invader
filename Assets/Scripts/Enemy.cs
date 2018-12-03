@@ -9,7 +9,7 @@ namespace Assets.Scripts
 {
     public class Enemy : MonoBehaviour
     {
-        public DataHolder DataHolder;
+        public ArenaController DataHolder;
         public GameObject PlayerGameObject;
 
         // Use this for initialization

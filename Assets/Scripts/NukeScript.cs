@@ -9,6 +9,8 @@ namespace Assets.Scripts
 {
     public class NukeScript : MonoBehaviour
     {
+        // ReSharper disable once FieldCanBeMadeReadOnly.Global
+        // ReSharper disable once MemberCanBePrivate.Global
         public float ExpansionSpeed = 5f;
 
         [UsedImplicitly]

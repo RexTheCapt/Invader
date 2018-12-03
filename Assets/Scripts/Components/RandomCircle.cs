@@ -6,6 +6,7 @@ using UnityEngine;
 
 namespace Assets.Scripts.Components
 {
+    // ReSharper disable once ClassNeverInstantiated.Global
     public class RandomCircle : MonoBehaviour
     {
         public Vector3 GetVector3(Vector3 center, float radius)

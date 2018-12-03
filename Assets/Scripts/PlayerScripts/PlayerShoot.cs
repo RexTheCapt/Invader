@@ -1,6 +1,5 @@
 ﻿#region Usings
 
-using System;
 using Assets.Scripts.BulletScripts;
 using JetBrains.Annotations;
 using UnityEngine;
@@ -13,11 +12,9 @@ namespace Assets.Scripts.PlayerScripts
     public class PlayerShoot : MonoBehaviour
     {
         public bool AutoFire = false;
-        public DataHolder DataHolder;
-        public GuiController GuiController;
-        public GameObject BulletGameObject;
-        public GameObject NukeBulletGameObject;
-        public GameObject BulletShieldGameObject;
+        [UsedImplicitly] public ArenaController DataHolder;
+        [UsedImplicitly] public GameObject BulletGameObject;
+        [UsedImplicitly] public GameObject NukeBulletGameObject;
 
         [UsedImplicitly]
         private void Update()
@@ -27,15 +24,14 @@ namespace Assets.Scripts.PlayerScripts
             // ReSharper disable once CompareOfFloatsByEqualityOperator
             if(Input.GetKeyDown(KeyCode.X) && DataHolder.NukeCharge >= 1f)
             {
-                DataHolder.NukeCharge = 0f;
+                DataHolder.ActivateNuke();
                 Fire(NukeBulletGameObject);
             }
 
             // ReSharper disable once CompareOfFloatsByEqualityOperator
             if (Input.GetKeyDown(KeyCode.Z) && DataHolder.ShieldCharge >= 1f)
             {
-                DataHolder.ShieldCharge = 0f;
-                Fire(BulletShieldGameObject);
+                DataHolder.ActivateShield();
             }
         }
 

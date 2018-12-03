@@ -12,7 +12,7 @@ namespace Assets.Scripts.BulletScripts
 {
     public class BulletSpecial : MonoBehaviour
     {
-        public List<GameObject> BulletList = new List<GameObject>();
+        public readonly List<GameObject> BulletList = new List<GameObject>();
         public float Speed = 1;
         public float SpinSpeed = 2f;
         public bool DestructOnContact = false;

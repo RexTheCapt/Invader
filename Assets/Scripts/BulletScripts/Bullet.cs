@@ -14,8 +14,7 @@ namespace Assets.Scripts.BulletScripts
         public BulletSpecial BulletSpecial;
         public float Speed = 5f;
         public Vector3 StartPosition;
-        public float DistanceTraveled;
-        public DataHolder DataHolder;
+        public ArenaController DataHolder;
 
         [UsedImplicitly]
         private void Start()
@@ -33,8 +32,6 @@ namespace Assets.Scripts.BulletScripts
         [UsedImplicitly]
         private void Update()
         {
-            DistanceTraveled = Vector3.Distance(gameObject.transform.position, StartPosition);
-
             if (Vector3.Distance(gameObject.transform.position, StartPosition) > 50f)
                 Destruct();
 
@@ -54,14 +51,7 @@ namespace Assets.Scripts.BulletScripts
             {
                 if (BulletSpecial == null)
                 {
-                    DataHolder.NukeCharge += DataHolder.NukeChargeAdd;
-                    DataHolder.ShieldCharge += DataHolder.ShieldChargeAdd;
-
-                    if (DataHolder.NukeCharge > 1f)
-                        DataHolder.NukeCharge = 1f;
-
-                    if (DataHolder.ShieldCharge > 1f)
-                        DataHolder.ShieldCharge = 1f;
+                    DataHolder.EnemyKilled();
                 }
 
                 Destruct();

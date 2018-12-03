@@ -9,7 +9,7 @@ namespace Assets.Scripts
 {
     public class EnableCanvasOnPlay : MonoBehaviour
     {
-        public GameObject CanvasGameObject;
+        [UsedImplicitly] public GameObject CanvasGameObject;
 
         // Use this for initialization
         [UsedImplicitly]

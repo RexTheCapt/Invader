@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 33251776974904608}
   - component: {fileID: 23860395566367028}
   - component: {fileID: 136881107373260130}
-  - component: {fileID: 114446448079488306}
+  - component: {fileID: 114762416792808728}
   m_Layer: 0
   m_Name: Capsule
   m_TagString: Bullet
@@ -115,18 +115,6 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1247948158248016}
   m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
---- !u!114 &114446448079488306
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1247948158248016}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8efa6393a06629c4ea6396f9759e10d7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ParentGameObject: {fileID: 1922054240396834}
 --- !u!114 &114600967670089120
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -142,6 +130,20 @@ MonoBehaviour:
   BulletSpecial: {fileID: 0}
   Speed: 30
   StartPosition: {x: 0, y: 0, z: 0}
+  DistanceTraveled: 0
+  DataHolder: {fileID: 0}
+--- !u!114 &114762416792808728
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1247948158248016}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8efa6393a06629c4ea6396f9759e10d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bullet: {fileID: 114600967670089120}
 --- !u!136 &136881107373260130
 CapsuleCollider:
   m_ObjectHideFlags: 1

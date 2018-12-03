@@ -474,9 +474,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: aeba945d012c13548ba5af330079bf7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  PlayerGameObject: {fileID: 1210668444}
   EnemyGameObjects: []
-  NukeCharge: 0
-  ShieldCharge: 0
   NukeChargeAdd: 0.005
   ShieldChargeAdd: 0.02
 --- !u!114 &990775919
@@ -574,6 +573,11 @@ CanvasRenderer:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1043781211}
   m_CullTransparentMesh: 0
+--- !u!1 &1210668444 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1627890893618970, guid: a7029b8efcf17414d9e81cd3c1d16c55,
+    type: 2}
+  m_PrefabInternal: {fileID: 1395612974}
 --- !u!1 &1271597500
 GameObject:
   m_ObjectHideFlags: 0

@@ -1,26 +1,32 @@
-﻿#region Usings
-
-using JetBrains.Annotations;
+﻿using JetBrains.Annotations;
 using UnityEngine;
-// ReSharper disable MemberCanBePrivate.Global
-
-#endregion
 
 namespace Assets.Scripts.BulletScripts
 {
     public class BulletHit : MonoBehaviour
     {
-        public GameObject ParentGameObject;
+        public Bullet Bullet;
 
         [UsedImplicitly]
-        // ReSharper disable once ParameterHidesMember
-        private void OnTriggerEnter(Collider collider)
+        public void OnCollisionEnter(Collision collision)
         {
-            if (collider.tag == "Enemy")
+            ObjectHit(collision.gameObject);
+        }
+
+        private void ObjectHit(GameObject game)
+        {
+            if (game.tag == "Enemy")
             {
-                Destroy(collider.gameObject);
-                ParentGameObject.GetComponent<Bullet>().DestructOnContact();
+                Destroy(game);
+                Bullet.DataHolder.EnemyKilled();
+                Destroy(gameObject);
             }
+        }
+
+        [UsedImplicitly]
+        public void OnTriggerEnter(Collider coll)
+        {
+            ObjectHit(coll.gameObject);
         }
     }
 }
