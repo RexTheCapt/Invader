@@ -1,5 +1,6 @@
 ﻿#region Usings
 
+using System;
 using Assets.Scripts.BulletScripts;
 using JetBrains.Annotations;
 using UnityEngine;
@@ -43,7 +44,14 @@ namespace Assets.Scripts.PlayerScripts
             GameObject bulletInstantiate = Instantiate(bullet);
             bulletInstantiate.transform.position = gameObject.transform.position;
             bulletInstantiate.transform.rotation = gameObject.transform.rotation;
-            bulletInstantiate.GetComponent<Bullet>().DataHolder = DataHolder;
+            try
+            {
+                bulletInstantiate.GetComponent<Bullet>().DataHolder = DataHolder;
+            }
+            catch
+            {
+                // ignored
+            }
         }
     }
 }
