@@ -1,5 +1,12 @@
 # Changelog
 
+## 03/12/18
+
+### Updated unity from 2018.2.17f1 to 2018.2.18f1
+
+### Changes
+- Suppressed an error i could not fix.
+
 ## 23/11/18
 
 ### Updated Unity from 2018.2.16f1 to 2018.2.17f1
